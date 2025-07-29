@@ -97,12 +97,12 @@ python Interactive.py --never-end
 Test out OpenVLA in Habitat. The recorded video is saved to /data/vids.
 
 ```bash
-python Simulation.py --no-render --save-obs
+python Simulation.py --no-render --save
 ```
 
 ### 6. Generate dataset with OpenVLA in Habitat
 
-To generate 1k+ dataset, run the following:
+To generate 1k+ dataset saved to /data, run the following:
 
 ```bash
 python Automation.py
