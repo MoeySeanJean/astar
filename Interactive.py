@@ -477,7 +477,6 @@ def play_env(env, args, config):
 
     if not args.no_render:
         draw_obs = observations_to_image(obs, {})
-        pygame.init()
         screen = pygame.display.set_mode(
             [draw_obs.shape[1], draw_obs.shape[0]]
         )
@@ -802,6 +801,8 @@ if __name__ == "__main__":
             task_config.actions.arm_action.arm_controller = "ArmEEAction"
         if task_config.type == "RearrangePddlTask-v0":
             task_config.actions["pddl_apply_action"] = PddlApplyActionConfig()
+
+    pygame.init()
 
     with habitat.Env(config=config) as env:
         play_env(env, args, config)

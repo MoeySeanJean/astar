@@ -107,3 +107,13 @@ To generate 1k+ dataset saved to /data, run the following:
 ```bash
 python Automation.py
 ```
+
+## Troubleshooting
+
+### WindowlessContext: Unable to create windowless context
+
+To fix this, try the following bash command before running Interactive.py, Simulation.py and Automation.py.
+
+```bash
+export __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/10_nvidia.json
+```
